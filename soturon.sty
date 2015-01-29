@@ -1,6 +1,5 @@
 %%
 %% This is file `soturon.cls',
-%% generated with the docstrip utility.
 %%
 %% by Satoshi Hashizume
 %%
@@ -14,18 +13,18 @@
 \def\title#1#2{\gdef\@title{#1}\def\@entitle{#2}}
 \def\year#1{\gdef\@year{#1}}
 
-% ƒwƒbƒ_[‚Ìİ’è
+% ãƒ˜ãƒƒãƒ€ãƒ¼ã®è¨­å®š
 \pagestyle{fancy} 
 \lhead{}
 \chead{}
-\rhead{NCT-§Œäî•ñ-\@year\@studentnumber}
+\rhead{NCT-åˆ¶å¾¡æƒ…å ±-\@year\@studentnumber}
 \cfoot{}
 \fancyheadoffset{-4truecm} 
 
-% ‹r’
+% è„šæ³¨
 \renewcommand\thefootnote{*\arabic{footnote}}
 
-% ‹Ï“™Š„‚è‚Ì’è‹` (LaTeX ”ü•¶Í“ü–å)
+% å‡ç­‰å‰²ã‚Šã®å®šç¾© (LaTeX ç¾æ–‡ç« å…¥é–€)
 \newcommand{\kintou}[2]{%
   \leavevmode
   \hbox to #1{%
@@ -33,7 +32,7 @@
     \xkanjiskip=\kanjiskip
     #2}}
 
-% ƒ}[ƒWƒ“‚Ì•ÏX
+% ãƒãƒ¼ã‚¸ãƒ³ã®å¤‰æ›´
 \newenvironment{esempio}%
   {%\vspace{1.5ex}
   \list{}{\setlength\leftmargin{15truemm}\setlength\rightmargin{1truecm}}\item\relax
@@ -41,7 +40,7 @@
   {\endlist}
 
 
-% ƒ^ƒCƒgƒ‹‚ÌÄ’è‹`
+% ã‚¿ã‚¤ãƒˆãƒ«ã®å†å®šç¾©
 \def\@maketitle{
 \begin{esempio}
   \begin{center}
@@ -52,8 +51,8 @@
   \vspace{0truemm}
   \begin{flushright}
      {\Large
-       \kintou{5zw}{•ñÒ F } \kintou{5zw}{\@author}\footnote[1]{À’Ã‚ê §Œäî•ñHŠw‰Èi§410-8501 –LÀ’Ãs‘å‰ª3600j}\\
-       \kintou{6.5zw}{w“±‹³ˆõ F } \kintou{5zw}{\@advisor}\footnotemark[1]}
+       \kintou{5zw}{å ±å‘Šè€… ï¼š } \kintou{5zw}{\@author}\footnote[1]{æ²¼æ´¥é«˜å°‚ åˆ¶å¾¡æƒ…å ±å·¥å­¦ç§‘ï¼ˆã€’410-8501 è±Šæ²¼æ´¥å¸‚å¤§å²¡3600ï¼‰}\\
+       \kintou{6.5zw}{æŒ‡å°æ•™å“¡ ï¼š } \kintou{5zw}{\@advisor}\footnotemark[1]}
   \end{flushright}
 
   \vspace{0truemm}
@@ -77,7 +76,7 @@
 }
 
 
-% abstract‚ÌÄ’è‹`
+% abstractã®å†å®šç¾©
 \renewcommand{\abstractname}{}
 \renewenvironment{abstract}{%
 \begin{esempio}
@@ -86,7 +85,7 @@
 \end{esempio}
 }
 
-% ƒL[ƒ[ƒh‚Ì’è‹`
+% ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã®å®šç¾©
 \newenvironment{keyword}{%
 \begin{esempio}
 \vspace{0zw}
@@ -97,18 +96,18 @@ key word:
 }
 
 
-% ƒZƒNƒVƒ‡ƒ“‚ğ’†‰›‘µ‚¦‚É(twocolumn)
+% ã‚»ã‚¯ã‚·ãƒ§ãƒ³ã‚’ä¸­å¤®æƒãˆã«(twocolumn)
 \renewcommand{\section}{%
   \@startsection{section}{1}{\z@}%
   {0.4\Cvs}{0.2\Cvs}%
   {\centering\normalfont\large\headfont}}
 
-\renewcommand{\subsection}{% •ÏX‚È‚µ
+\renewcommand{\subsection}{% å¤‰æ›´ãªã—
   \@startsection{subsection}{2}{\z@}%
   {\z@}{\z@}%
   {\normalfont\normalsize\headfont}}
 
-\renewcommand{\subsubsection}{% •ÏX‚È‚µ
+\renewcommand{\subsubsection}{% å¤‰æ›´ãªã—
   \@startsection{subsubsection}{3}{\z@}%
   {\z@}{\z@}%
   {\normalfont\normalsize\headfont}}
