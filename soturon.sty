@@ -1,0 +1,114 @@
+%%
+%% This is file `soturon.cls',
+%% generated with the docstrip utility.
+%%
+%% by Satoshi Hashizume
+%%
+\usepackage{fancyhdr}
+\usepackage[left=20truemm, right=20truemm, top=35truemm, bottom=20truemm]{geometry}
+\usepackage{multicol}
+
+\def\author#1#2{\gdef\@author{#1}\gdef\@enauthor{#2}}
+\def\advisor#1#2{\gdef\@advisor{#1}\gdef\@enadvisor{#2}}
+\def\studentnumber#1{\gdef\@studentnumber{#1}}
+\def\title#1#2{\gdef\@title{#1}\def\@entitle{#2}}
+\def\year#1{\gdef\@year{#1}}
+
+% ヘッダーの設定
+\pagestyle{fancy} 
+\lhead{}
+\chead{}
+\rhead{NCT-制御情報-\@year\@studentnumber}
+\cfoot{}
+\fancyheadoffset{-4truecm} 
+
+% 脚注
+\renewcommand\thefootnote{*\arabic{footnote}}
+
+% 均等割りの定義 (LaTeX 美文章入門)
+\newcommand{\kintou}[2]{%
+  \leavevmode
+  \hbox to #1{%
+    \kanjiskip=0pt plus 1fill minus 1fill
+    \xkanjiskip=\kanjiskip
+    #2}}
+
+% マージンの変更
+\newenvironment{esempio}%
+  {%\vspace{1.5ex}
+  \list{}{\setlength\leftmargin{15truemm}\setlength\rightmargin{1truecm}}\item\relax
+  }
+  {\endlist}
+
+
+% タイトルの再定義
+\def\@maketitle{
+\begin{esempio}
+  \begin{center}
+    \vspace*{0truemm}
+    \textgt{\Large \@title}
+  \end{center}
+
+  \vspace{0truemm}
+  \begin{flushright}
+     {\Large
+       \kintou{5zw}{報告者 ： } \kintou{5zw}{\@author}\footnote[1]{沼津高専 制御情報工学科（〒410-8501 豊沼津市大岡3600）}\\
+       \kintou{6.5zw}{指導教員 ： } \kintou{5zw}{\@advisor}\footnotemark[1]}
+  \end{flushright}
+
+  \vspace{0truemm}
+  \begin{center}
+    \textbf{\large \@entitle}
+
+    \vspace{3truemm}
+    {\large \@enauthor\footnotemark[1] \ and \@enadvisor\footnotemark[1]}
+
+    \vspace{3truemm}
+    {\footnotemark[1]\small Department of Control \& Computer Engineering,
+ Numazu College of Technology,\\
+      3600 Ooka Numazu,-shi, Shizuoka, 410-8501 Japan}
+  \end{center}
+\end{esempio}
+}
+
+\def\maketitle{\par
+  \@maketitle
+  \thispagestyle{fancy}
+}
+
+
+% abstractの再定義
+\renewcommand{\abstractname}{}
+\renewenvironment{abstract}{%
+\begin{esempio}
+}
+{%
+\end{esempio}
+}
+
+% キーワードの定義
+\newenvironment{keyword}{%
+\begin{esempio}
+\vspace{0zw}
+key word:
+}
+{%
+\end{esempio}
+}
+
+
+% セクションを中央揃えに(twocolumn)
+\renewcommand{\section}{%
+  \@startsection{section}{1}{\z@}%
+  {0.4\Cvs}{0.2\Cvs}%
+  {\centering\normalfont\large\headfont}}
+
+\renewcommand{\subsection}{% 変更なし
+  \@startsection{subsection}{2}{\z@}%
+  {\z@}{\z@}%
+  {\normalfont\normalsize\headfont}}
+
+\renewcommand{\subsubsection}{% 変更なし
+  \@startsection{subsubsection}{3}{\z@}%
+  {\z@}{\z@}%
+  {\normalfont\normalsize\headfont}}
